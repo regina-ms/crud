@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul {
+  list-style-type: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.notes {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 40px;  
 }
 
-.App-link {
-  color: #61dafb;
+.notes-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  width: 800px;
+  margin: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.note-item {
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  border: 1px solid black;
+  position: relative;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.note-item button {
+  position: absolute;
+  top: -12px;
+  right: -16px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 8px 12px;
+}
+
+.textarea {
+  position: relative;
+  width: 300px;
+  height: 100px;
+  border: 1px solid black;
+}
+
+.textarea textarea {
+  resize: none;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  
+}
+.textarea textarea:focus-visible {
+  outline: none;
+}
+
+.textarea button {
+  font-size: 26px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 0 5px;
+  position: absolute;
+  bottom: 14px;
+  right: 10px;
 }
